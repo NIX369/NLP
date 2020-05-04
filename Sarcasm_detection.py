@@ -32,7 +32,7 @@ training_sequences = tokenizer.texts_to_sequences(training_sentences)
 training_paded = pad_sequences(training_sequences)
 
 test_sequences = tokenizer.texts_to_sequences(testing_sentences)
-testing_padding = pad_sequences(testing_sentences)
+testing_padding = pad_sequences(test_sequences)
 
 model = tf.keras.Sequential([
     tf.keras.layers.Embedding(10000, 16, input_length=100),
